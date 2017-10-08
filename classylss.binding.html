@@ -1,0 +1,1026 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>classylss.binding module &#8212; classylss 0.2.6.dev0 documentation</title>
+    <link rel="stylesheet" href="_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.2.6.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="classylss.version module" href="classylss.version.html" />
+    <link rel="prev" title="classylss.astropy_compat module" href="classylss.astropy_compat.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classylss.version.html" title="classylss.version module"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="classylss.astropy_compat.html" title="classylss.astropy_compat module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">classylss 0.2.6.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="classylss.html" accesskey="U">classylss package</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-classylss.binding">
+<span id="classylss-binding-module"></span><h1>classylss.binding module<a class="headerlink" href="#module-classylss.binding" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="classylss.binding.Background">
+<em class="property">class </em><code class="descclassname">classylss.binding.</code><code class="descname">Background</code><span class="sig-paren">(</span><em>ClassEngine engine</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="classylss.binding.Background.C">
+<code class="descname">C</code><a class="headerlink" href="#classylss.binding.Background.C" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.G">
+<code class="descname">G</code><a class="headerlink" href="#classylss.binding.Background.G" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.H0">
+<code class="descname">H0</code><a class="headerlink" href="#classylss.binding.Background.H0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.N_ncdm">
+<code class="descname">N_ncdm</code><a class="headerlink" href="#classylss.binding.Background.N_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of distinguishable ncdm (massive neutrino) species.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.N_ur">
+<code class="descname">N_ur</code><a class="headerlink" href="#classylss.binding.Background.N_ur" title="Permalink to this definition">¶</a></dt>
+<dd><p>The number of ultra-relativistic species. This is equal to:</p>
+<div class="math">
+<p><img src="_images/math/5d21b5fa69db01b16ce239f97824ed74025f51d0.png" alt="N_{ur} = \Omega_{0,ur} / (7/8 (4/11)^{4/3} \Omega_{0,g})."/></p>
+</div></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Neff">
+<code class="descname">Neff</code><a class="headerlink" href="#classylss.binding.Background.Neff" title="Permalink to this definition">¶</a></dt>
+<dd><p>Effective number of relativistic species, summed over ultra-relativistic
+and ncdm species.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_b">
+<code class="descname">Omega0_b</code><a class="headerlink" href="#classylss.binding.Background.Omega0_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter for photons, <img class="math" src="_images/math/329c80c08a1ebdfea34fbbe050ca70dd5051ae48.png" alt="\Omega_{b,0}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_cdm">
+<code class="descname">Omega0_cdm</code><a class="headerlink" href="#classylss.binding.Background.Omega0_cdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter for cold dark matter, <img class="math" src="_images/math/34a5eb88cdbd4e34ba3c1acd156e7737a51bb40a.png" alt="\Omega_{cdm,0}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_dcdm">
+<code class="descname">Omega0_dcdm</code><a class="headerlink" href="#classylss.binding.Background.Omega0_dcdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parammeter for decaying cold dark matter,
+<img class="math" src="_images/math/5c626b392a732daf3bf2f94bd538a2468058aab4.png" alt="\Omega_{dcdm,0}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_fld">
+<code class="descname">Omega0_fld</code><a class="headerlink" href="#classylss.binding.Background.Omega0_fld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter for dark energy (fluid), <img class="math" src="_images/math/cdfc6f7dfac72405c41ac5e4aabfc7188bc4f8a0.png" alt="\Omega_{de,0}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_g">
+<code class="descname">Omega0_g</code><a class="headerlink" href="#classylss.binding.Background.Omega0_g" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter for photons, <img class="math" src="_images/math/322d4d277b9a239aec5a384a80f12bf3a676d035.png" alt="\Omega_{g,0}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_k">
+<code class="descname">Omega0_k</code><a class="headerlink" href="#classylss.binding.Background.Omega0_k" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter for curvaturve, <img class="math" src="_images/math/1bbc65a9ab5bce866bb36f32475c0648c94bd78b.png" alt="\Omega_{k,0}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_lambda">
+<code class="descname">Omega0_lambda</code><a class="headerlink" href="#classylss.binding.Background.Omega0_lambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter for cosmological constant, <img class="math" src="_images/math/71a380f0b494fbc638dd3aa182d3602c68c0d241.png" alt="\Omega_{\Lambda,0}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_m">
+<code class="descname">Omega0_m</code><a class="headerlink" href="#classylss.binding.Background.Omega0_m" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sum of density parameters for all non-relativistic components,
+<img class="math" src="_images/math/ca8e8a74d893178b19c440d151285c270f916210.png" alt="\Omega_{0,m}"/>. The value differ from Astropy’s; the semantics is
+identical.</p>
+<p>This is equal to:</p>
+<div class="math">
+<p><img src="_images/math/203ccc840b174b96cbaf9915c5408e7e30ea09cf.png" alt="\Omega_{0,m} = \Omega_{0,b} + \Omega_{0,cdm} + \Omega_{0,ncdm} + \Omega_{0,dcdm} - \Omega_{0,pncdm}."/></p>
+</div></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_ncdm">
+<code class="descname">Omega0_ncdm</code><a class="headerlink" href="#classylss.binding.Background.Omega0_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter for distinguishable (massive) neutrinos for
+each species as an array, <img class="math" src="_images/math/f32eacf0e8f44f930d07e8b86d13a85a9da57c7b.png" alt="\Omega_{0, ncdm}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_ncdm_tot">
+<code class="descname">Omega0_ncdm_tot</code><a class="headerlink" href="#classylss.binding.Background.Omega0_ncdm_tot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current total density parameter of all distinguishable (massive)
+neutrinos.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_pncdm">
+<code class="descname">Omega0_pncdm</code><a class="headerlink" href="#classylss.binding.Background.Omega0_pncdm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_pncdm_tot">
+<code class="descname">Omega0_pncdm_tot</code><a class="headerlink" href="#classylss.binding.Background.Omega0_pncdm_tot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_r">
+<code class="descname">Omega0_r</code><a class="headerlink" href="#classylss.binding.Background.Omega0_r" title="Permalink to this definition">¶</a></dt>
+<dd><blockquote>
+<div><blockquote>
+<div>Current density parameter of radiation, <img class="math" src="_images/math/00e50d8d20b79ee1e8558ff8203c379e84dc95e2.png" alt="\Omega_{0,r}"/>.
+This is equal to:</div></blockquote>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">\Omega_{0,r} = \Omega_{0,g} + \Omega_{0,
+
+</tt>)</p>
+latex exited with error
+[stdout]
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex)
+ restricted \write18 enabled.
+entering extended mode
+(./math.tex
+LaTeX2e &lt;2016/03/31&gt;
+Babel &lt;3.9r&gt; and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty) (./math.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd))
+Runaway argument?
+\Omega _{0,r} = \Omega _{0,g} + \Omega _{0,\end {split} \end {equatio\ETC.
+! File ended while scanning use of \split.
+&lt;inserted text&gt; 
+                \par 
+&lt;*&gt; math.tex
+            
+! Emergency stop.
+&lt;*&gt; math.tex
+            
+No pages of output.
+Transcript written on math.log.
+</div>
+</div></blockquote>
+<p>u_r} + Omega_{0,pncdm}.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.Omega0_ur">
+<code class="descname">Omega0_ur</code><a class="headerlink" href="#classylss.binding.Background.Omega0_ur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current density parameter of ultra-relativistic (massless) neutrinos,
+<img class="math" src="_images/math/98c5deed1b2809f3e91b23b4a0ce1817706c6897.png" alt="\Omega_{0,\nu_r}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_b">
+<code class="descname">Omega_b</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of baryons.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_cdm">
+<code class="descname">Omega_cdm</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_cdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of cold dark matter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_fld">
+<code class="descname">Omega_fld</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_fld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of dark energy (fluid).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_g">
+<code class="descname">Omega_g</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_g" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of photons.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_k">
+<code class="descname">Omega_k</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_k" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of curvature.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_lambda">
+<code class="descname">Omega_lambda</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_lambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of dark energy (cosmological constant).</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_m">
+<code class="descname">Omega_m</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of non-relativistic (matter like) component, including
+non-relativistic part of massive neutrino. Unit</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_ncdm">
+<code class="descname">Omega_ncdm</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>species=None</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of massive neutrinos.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_pncdm">
+<code class="descname">Omega_pncdm</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>species=None</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_pncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <img class="math" src="_images/math/90a5cba83ad5f6009a12a84b67adf992de6ba6ea.png" alt="\Omega_{pncdm}"/> as a function redshift.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_r">
+<code class="descname">Omega_r</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of relativistic (radiation like) component, including
+relativistic part of massive neutrino and massless neutrino.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.Omega_ur">
+<code class="descname">Omega_ur</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.Omega_ur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density parameter of ultra relativistic neutrinos.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.T0_cmb">
+<code class="descname">T0_cmb</code><a class="headerlink" href="#classylss.binding.Background.T0_cmb" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current CMB temperature in Kelvins.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.T0_ncdm">
+<code class="descname">T0_ncdm</code><a class="headerlink" href="#classylss.binding.Background.T0_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>An array holding the current ncdm temperature in Kelvins for each species.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.T_cmb">
+<code class="descname">T_cmb</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.T_cmb" title="Permalink to this definition">¶</a></dt>
+<dd><p>The CMB temperature as a function of redshift.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.T_ncdm">
+<code class="descname">T_ncdm</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.T_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>The ncdm temperature (massive neutrinos) as a function of redshift.</p>
+<p>Return shape is (N_ncdm,) if N_ncdm == 1 else (len(z), N_ncdm)</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.a_max">
+<code class="descname">a_max</code><a class="headerlink" href="#classylss.binding.Background.a_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum scale factor for which results can be computed; it can be
+greater than 1.0.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.a_today">
+<code class="descname">a_today</code><a class="headerlink" href="#classylss.binding.Background.a_today" title="Permalink to this definition">¶</a></dt>
+<dd><p>An arbitrary number that sets the reference scaling factor.
+It shall be 1 usually.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.age0">
+<code class="descname">age0</code><a class="headerlink" href="#classylss.binding.Background.age0" title="Permalink to this definition">¶</a></dt>
+<dd><p>The current age of the universe in gigayears.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.angular_diameter_distance">
+<code class="descname">angular_diameter_distance</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.angular_diameter_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Angular diameter distance in :math:<a href="#id1"><span class="problematic" id="id2">`</span></a>mathrm{Mpc}/h at a given redshift.</p>
+<p>This gives the proper (sometimes called ‘physical’) transverse
+distance corresponding to an angle of 1 radian for an object
+at redshift <code class="docutils literal"><span class="pre">z</span></code>.</p>
+<p>It is equal to the comoving transverse distance divided by <img class="math" src="_images/math/ed3071dba539b72b11b9480c0c98e4f6744f4ead.png" alt="1+z"/>.</p>
+<p>See eq. 18 of astro-ph/9905116 for <img class="math" src="_images/math/ea66abfc80d4aade7cd0548ef2142e5068c09740.png" alt="D_A(z)"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.comoving_distance">
+<code class="descname">comoving_distance</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.comoving_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comoving line-of-sight distance in <img class="math" src="_images/math/032db98bdb02ab5766c145bf516b57ace73ef60b.png" alt="\mathrm{Mpc}/h"/> at a given
+redshift.</p>
+<p>The comoving distance along the line-of-sight between two
+objects remains constant with time for objects in the Hubble
+flow.</p>
+<p>See eq. 15 of astro-ph/9905116 for <img class="math" src="_images/math/6ad1056aaa6d8310aec75c7bbc0db657e7789c98.png" alt="D_C(z)"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.comoving_transverse_distance">
+<code class="descname">comoving_transverse_distance</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.comoving_transverse_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Comoving transverse distance in <img class="math" src="_images/math/032db98bdb02ab5766c145bf516b57ace73ef60b.png" alt="\mathrm{Mpc}/h"/> at a given
+redshift.</p>
+<p>This value is the transverse comoving distance at redshift <code class="docutils literal"><span class="pre">z</span></code>
+corresponding to an angular separation of 1 radian. This is
+the same as the comoving distance in a flat universe.</p>
+<p>See eq. 16 of astro-ph/9905116 for <img class="math" src="_images/math/b9787b69b43d204ae6c95792fa9f59de0e59a0e3.png" alt="D_M(z)"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.compute_for_z">
+<code class="descname">compute_for_z</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>int column</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.compute_for_z" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.data">
+<code class="descname">data</code><a class="headerlink" href="#classylss.binding.Background.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.efunc">
+<code class="descname">efunc</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.efunc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function giving <img class="math" src="_images/math/447df77bc6a4f5e348d42c0be5d2d4787fcc5501.png" alt="E(z)"/>, where the Hubble parameter is defined as
+<img class="math" src="_images/math/8fd33104f66ffabf87106ef11fa8acbdebe563d6.png" alt="H(z) = H_0 E(z)"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.efunc_prime">
+<code class="descname">efunc_prime</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.efunc_prime" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function giving <img class="math" src="_images/math/f7f170bc64c6d26e1f9a414255f3760fffc7b103.png" alt="dE(z) / da"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.h">
+<code class="descname">h</code><a class="headerlink" href="#classylss.binding.Background.h" title="Permalink to this definition">¶</a></dt>
+<dd><p>The dimensionless Hubble parameter.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.hubble_function">
+<code class="descname">hubble_function</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.hubble_function" title="Permalink to this definition">¶</a></dt>
+<dd><p>The Hubble function in CLASS units. Users should use <a class="reference internal" href="#classylss.binding.Background.efunc" title="classylss.binding.Background.efunc"><code class="xref py py-func docutils literal"><span class="pre">efunc()</span></code></a>
+instead.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.hubble_function_prime">
+<code class="descname">hubble_function_prime</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.hubble_function_prime" title="Permalink to this definition">¶</a></dt>
+<dd><p>d H / d tau ; d tau / da = 1 / (a ** 2 H) in class units;
+use <a class="reference internal" href="#classylss.binding.Background.efunc_prime" title="classylss.binding.Background.efunc_prime"><code class="xref py py-func docutils literal"><span class="pre">efunc_prime()</span></code></a> instead</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.luminosity_distance">
+<code class="descname">luminosity_distance</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.luminosity_distance" title="Permalink to this definition">¶</a></dt>
+<dd><p>Luminosity distance in <img class="math" src="_images/math/032db98bdb02ab5766c145bf516b57ace73ef60b.png" alt="\mathrm{Mpc}/h"/> at redshift <code class="docutils literal"><span class="pre">z</span></code>.</p>
+<p>This is the distance to use when converting between the
+bolometric flux from an object at redshift <code class="docutils literal"><span class="pre">z</span></code> and its
+bolometric luminosity.</p>
+<p>It is equal to the comoving transverse distance times <img class="math" src="_images/math/ed3071dba539b72b11b9480c0c98e4f6744f4ead.png" alt="1+z"/>.</p>
+<p>See eq. 21 of astro-ph/9905116 for <img class="math" src="_images/math/2c3f7f1782c21f23f0a4602ad7a9c7e7f6e001e2.png" alt="D_L(z)"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.m_ncdm">
+<code class="descname">m_ncdm</code><a class="headerlink" href="#classylss.binding.Background.m_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>The masses of the distinguishable ncdm (massive neutrino) species,
+in units of eV.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.p_ncdm">
+<code class="descname">p_ncdm</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>species=None</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.p_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pressure of non-relative part of massive neutrino.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_b">
+<code class="descname">rho_b</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of baryons <img class="math" src="_images/math/323635ef5e2119c7798f6f10dfedf8d08828949b.png" alt="\rho_b"/> as a function of redshift, in
+units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_cdm">
+<code class="descname">rho_cdm</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_cdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of cold dark matter <img class="math" src="_images/math/61ba7e6fad16c44c5e31a91a6a66990ad66a3b53.png" alt="\rho_{cdm}"/> as a function of redshift,
+in units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_crit">
+<code class="descname">rho_crit</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_crit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Critical density excluding curvature <img class="math" src="_images/math/0bef3c80dd1cb9de21eb788cf2a0a5be55479ecb.png" alt="\rho_cs"/> as a function of
+redshift, in units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+<p>This is defined as:</p>
+<div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">\rho_\c(z) = \frac{3 H(z)^2}{8 \pi G}.</tt>)</p>
+latex exited with error
+[stdout]
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex)
+ restricted \write18 enabled.
+entering extended mode
+(./math.tex
+LaTeX2e &lt;2016/03/31&gt;
+Babel &lt;3.9r&gt; and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty) (./math.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+! Missing { inserted.
+&lt;to be read again&gt; 
+                   \begingroup 
+l.13 ...(z) = \frac{3 H(z)^2}{8 \pi G}.\end{split}
+                                                  
+
+LaTeX Warning: Command \c invalid in math mode on input line 13.
+
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.13 ...(z) = \frac{3 H(z)^2}{8 \pi G}.\end{split}
+                                                  
+! Missing { inserted.
+&lt;to be read again&gt; 
+                   \begingroup 
+l.13 ...(z) = \frac{3 H(z)^2}{8 \pi G}.\end{split}
+                                                  
+
+LaTeX Warning: Command \c invalid in math mode on input line 13.
+
+! Missing } inserted.
+&lt;inserted text&gt; 
+                }
+l.13 ...(z) = \frac{3 H(z)^2}{8 \pi G}.\end{split}
+                                                  
+[1] (./math.aux) )
+(see the transcript file for additional information)
+Output written on math.dvi (1 page, 560 bytes).
+Transcript written on math.log.
+</div>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_fld">
+<code class="descname">rho_fld</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_fld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of dark energy fluid <img class="math" src="_images/math/b76d29dc7231e53500517fe21d3ee793b081a4b5.png" alt="\rho_{fld}"/> as a function of
+redshift, in units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_g">
+<code class="descname">rho_g</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_g" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of photons <img class="math" src="_images/math/f34bdc6a73812eaa917f318833572a7462d8c327.png" alt="\rho_g"/> as a function of redshift, in
+units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_k">
+<code class="descname">rho_k</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_k" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of curvature <img class="math" src="_images/math/122db759abf98aa63922d1a8d4bf53f07ac6fd90.png" alt="\rho_k"/> as a function of redshift, in
+units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+<p>Note: this is defined such that</p>
+<div class="math">
+<p><img src="_images/math/bfab22fa0e386854e0624f0ff01adea08078e6c6.png" alt="\rho_\mathrm{crit} = \rho_\mathrm{tot} + \rho_k"/></p>
+</div></dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_lambda">
+<code class="descname">rho_lambda</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_lambda" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of cosmological constant <img class="math" src="_images/math/4f879cd78773f5a790414ed3b69b4c2d51ceab83.png" alt="\rho_\Lambda"/> as a function of
+redshift, in units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_m">
+<code class="descname">rho_m</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_m" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of matter <img class="math" src="_images/math/323635ef5e2119c7798f6f10dfedf8d08828949b.png" alt="\rho_b"/> as a function of redshift, in
+units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_ncdm">
+<code class="descname">rho_ncdm</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>species=None</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_ncdm" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of non-relativistic part of massive neutrinos <img class="math" src="_images/math/392afe1aadc105257ce3f41c2158a9dc70580bdb.png" alt="\rho_{ncdm}"/>
+as a function of redshift, in units of
+<img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_r">
+<code class="descname">rho_r</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_r" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of radiation <img class="math" src="_images/math/59b50066d64b5cecb8f649638134b72b3824a7e9.png" alt="\rho_r"/> as a function of redshift, in
+units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_tot">
+<code class="descname">rho_tot</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_tot" title="Permalink to this definition">¶</a></dt>
+<dd><p>Total density <div class="system-message">
+<p class="system-message-title">System Message: WARNING/2 (<tt class="docutils">\rho_\mathr{tot}</tt>)</p>
+latex exited with error
+[stdout]
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016) (preloaded format=latex)
+ restricted \write18 enabled.
+entering extended mode
+(./math.tex
+LaTeX2e &lt;2016/03/31&gt;
+Babel &lt;3.9r&gt; and hyphenation patterns for 3 language(s) loaded.
+(/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size12.clo))
+(/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/utf8x.def))
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucs.sty
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/data/uni-global.def))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/amscls/amsthm.sty)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty) (./math.aux)
+(/usr/share/texlive/texmf-dist/tex/latex/ucs/ucsencs.def)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd)
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd)
+! Undefined control sequence.
+l.12 $\rho_\mathr
+                 {tot}$
+[1] (./math.aux) )
+(see the transcript file for additional information)
+Output written on math.dvi (1 page, 256 bytes).
+Transcript written on math.log.
+</div>
+ as a function of redshift, in
+units of <img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>. It is usually
+close to 27.76.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.rho_ur">
+<code class="descname">rho_ur</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.rho_ur" title="Permalink to this definition">¶</a></dt>
+<dd><p>Density of ultra-relativistic radiation (massless neutrinos)
+<img class="math" src="_images/math/f00b7ee905799ecd1315b5ed6f48addc6225e0f1.png" alt="\rho_{ur}"/> as a function of redshift, in units of
+<img class="math" src="_images/math/7ae16d0d60cd523b0866d05ede09589f4731a310.png" alt="10^{10} (M_\odot/h) (Mpc/h)^{-3}"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.scale_independent_growth_factor">
+<code class="descname">scale_independent_growth_factor</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.scale_independent_growth_factor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the scale invariant growth factor <img class="math" src="_images/math/35727fdd30ceb3f8382b774f28303fb3fe4c462b.png" alt="D(a)"/> for CDM
+perturbations.</p>
+<p>This is the quantity defined by CLASS as <code class="docutils literal"><span class="pre">index_bg_D</span></code> in the
+background module.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.scale_independent_growth_rate">
+<code class="descname">scale_independent_growth_rate</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.scale_independent_growth_rate" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scale invariant growth rate <img class="math" src="_images/math/1e29ac878724a97fc909b97cea573d7b159e88f8.png" alt="d\mathrm{ln}D/d\mathrm{ln}a"/> for
+CDM perturbations.</p>
+<p>This is the quantity defined by CLASS as <code class="docutils literal"><span class="pre">index_bg_f</span></code> in the
+background module.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.tau">
+<code class="descname">tau</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.tau" title="Permalink to this definition">¶</a></dt>
+<dd><p>Conformal time, equal to comoving distance when K = 0.0
+(flat universe). In units of <img class="math" src="_images/math/4c82865cdcfe4635db2ed1046a843e3d91d8e56e.png" alt="\mathrm{Mpc}"/> as in CLASS.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Background.time">
+<code class="descname">time</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Background.time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Proper time (age of universe) in gigayears.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.w0_fld">
+<code class="descname">w0_fld</code><a class="headerlink" href="#classylss.binding.Background.w0_fld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Current fluid equation of state parameter, <img class="math" src="_images/math/171eabecb979b8ad30c5279ed05cea3f8c22f3e0.png" alt="w_{0,fld}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Background.wa_fld">
+<code class="descname">wa_fld</code><a class="headerlink" href="#classylss.binding.Background.wa_fld" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fluid equation of state derivative, <img class="math" src="_images/math/533296739a3a89202d83b89858186e7c72b39865.png" alt="w_{a,fld}"/>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="classylss.binding.ClassBadValueError">
+<em class="property">exception </em><code class="descclassname">classylss.binding.</code><code class="descname">ClassBadValueError</code><a class="headerlink" href="#classylss.binding.ClassBadValueError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ValueError</span></code></p>
+<p>Raised when Class could not compute the cosmology at this point.</p>
+<p>This will be caught by the parameter extraction code to give an extremely
+unlikely value to this point</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="classylss.binding.ClassEngine">
+<em class="property">class </em><code class="descclassname">classylss.binding.</code><code class="descname">ClassEngine</code><span class="sig-paren">(</span><em>pars={}</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.ClassEngine" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="classylss.binding.ClassEngine.parameter_file">
+<code class="descname">parameter_file</code><a class="headerlink" href="#classylss.binding.ClassEngine.parameter_file" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="exception">
+<dt id="classylss.binding.ClassParserError">
+<em class="property">exception </em><code class="descclassname">classylss.binding.</code><code class="descname">ClassParserError</code><a class="headerlink" href="#classylss.binding.ClassParserError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">ValueError</span></code></p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="classylss.binding.ClassRuntimeError">
+<em class="property">exception </em><code class="descclassname">classylss.binding.</code><code class="descname">ClassRuntimeError</code><a class="headerlink" href="#classylss.binding.ClassRuntimeError" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">RuntimeError</span></code></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="classylss.binding.Perturbs">
+<em class="property">class </em><code class="descclassname">classylss.binding.</code><code class="descname">Perturbs</code><span class="sig-paren">(</span><em>ClassEngine engine</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Perturbs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="classylss.binding.Perturbs.P_z_max">
+<code class="descname">P_z_max</code><a class="headerlink" href="#classylss.binding.Perturbs.P_z_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>The input parameter specifying the maximum redshift measured for
+power spectra.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Perturbs.gauge">
+<code class="descname">gauge</code><a class="headerlink" href="#classylss.binding.Perturbs.gauge" title="Permalink to this definition">¶</a></dt>
+<dd><p>The gauge name as a string.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Perturbs.k_max_for_pk">
+<code class="descname">k_max_for_pk</code><a class="headerlink" href="#classylss.binding.Perturbs.k_max_for_pk" title="Permalink to this definition">¶</a></dt>
+<dd><p>The input parameter specifying the maximum <code class="docutils literal"><span class="pre">k</span></code> value to compute
+spectra for in <img class="math" src="_images/math/7bb56e2b99e97228371a2998e38b7a5e1debe7bc.png" alt="h \mathrm{Mpc}^{-1}"/>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="classylss.binding.Primordial">
+<em class="property">class </em><code class="descclassname">classylss.binding.</code><code class="descname">Primordial</code><span class="sig-paren">(</span><em>ClassEngine engine</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Primordial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="classylss.binding.Primordial.get_pk">
+<code class="descname">get_pk</code><span class="sig-paren">(</span><em>self</em>, <em>k</em>, <em>mode='linear'</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Primordial.get_pk" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primoridal spectrum at <code class="docutils literal"><span class="pre">k</span></code>. The units are such that:</p>
+<div class="math">
+<p><img src="_images/math/f6eb6108f8e89a3f6c6f96f0170c7344703d944e.png" alt="P_L = 2 \pi^2 / k^3 T^2(k) P_\mathrm{primordial}"/></p>
+</div><table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>k</strong> : array_like</p>
+<blockquote class="last">
+<div><p>wavenumbers in <img class="math" src="_images/math/7bb56e2b99e97228371a2998e38b7a5e1debe7bc.png" alt="h \mathrm{Mpc}^{-1}"/> units.</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Primordial.get_primordial">
+<code class="descname">get_primordial</code><span class="sig-paren">(</span><em>self</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Primordial.get_primordial" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the primordial scalar and/or tensor spectrum depending on ‘modes’.
+‘output’ must be set to something, e.g. ‘tCl’.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Returns:</th><td class="field-body"><p class="first">primordial :</p>
+<blockquote class="last">
+<div><p>dictionary containing k-vector and primordial scalar and tensor P(k).</p>
+</div></blockquote>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="classylss.binding.Spectra">
+<em class="property">class </em><code class="descclassname">classylss.binding.</code><code class="descname">Spectra</code><span class="sig-paren">(</span><em>ClassEngine engine</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Spectra" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.A_s">
+<code class="descname">A_s</code><a class="headerlink" href="#classylss.binding.Spectra.A_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>The scalar amplitude of the primordial power spectrum at
+<img class="math" src="_images/math/0cfe8ec7c89b8d49317665d0f52923471193f667.png" alt="k_\mathrm{pivot}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.P_k_max">
+<code class="descname">P_k_max</code><a class="headerlink" href="#classylss.binding.Spectra.P_k_max" title="Permalink to this definition">¶</a></dt>
+<dd><p>The maximum <code class="docutils literal"><span class="pre">k</span></code> value measured for power spectra in
+<img class="math" src="_images/math/7bb56e2b99e97228371a2998e38b7a5e1debe7bc.png" alt="h \mathrm{Mpc}^{-1}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.P_k_min">
+<code class="descname">P_k_min</code><a class="headerlink" href="#classylss.binding.Spectra.P_k_min" title="Permalink to this definition">¶</a></dt>
+<dd><p>The minimum <code class="docutils literal"><span class="pre">k</span></code> value for which power spectra have been computed in
+<img class="math" src="_images/math/7bb56e2b99e97228371a2998e38b7a5e1debe7bc.png" alt="h \mathrm{Mpc}^{-1}"/>.</p>
+<p>This is computed from the <code class="docutils literal"><span class="pre">ln_k</span></code> array of the Spectra module.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.data">
+<code class="descname">data</code><a class="headerlink" href="#classylss.binding.Spectra.data" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Spectra.get_pk">
+<code class="descname">get_pk</code><span class="sig-paren">(</span><em>self</em>, <em>k</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Spectra.get_pk" title="Permalink to this definition">¶</a></dt>
+<dd><p>Primary Power spectrum result (non-linear if enabled) on k and z array. K in h/Mpc units.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Spectra.get_pklin">
+<code class="descname">get_pklin</code><span class="sig-paren">(</span><em>self</em>, <em>k</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Spectra.get_pklin" title="Permalink to this definition">¶</a></dt>
+<dd><p>Linear Power spectrum result (linear even if non-linear is enabled) on k and z array. K in h/Mpc units.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Spectra.get_transfer">
+<code class="descname">get_transfer</code><span class="sig-paren">(</span><em>self</em>, <em>z</em>, <em>output_format='class'</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Spectra.get_transfer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the density and/or velocity transfer functions for all initial
+conditions today. You must include ‘dCl’ and ‘vCl’ in the list of
+‘output’. The transfer functions can also be computed at higher redshift z
+provided that ‘z_pk’ has been set and that z is inside the region spanned by ‘z_pk’.</p>
+<p>This function is not vectorized; because it returns a vector when ic_size is
+greater than 1, and I don’t understand ic_size.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><p class="first"><strong>z</strong> : redshift (default = 0)</p>
+<p><strong>output_format</strong> : (‘class’ or ‘camb’) Format transfer functions according to</p>
+<blockquote>
+<div><p>CLASS convention (default) or CAMB convention.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body"><p class="first"><strong>tk</strong> : array_like, containing transfer functions. Unlike CLASS, k here is in Mpc/h Units.</p>
+<div class="last admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">With different cosmology the values of ‘k’ may be different.</p>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.has_pk_matter">
+<code class="descname">has_pk_matter</code><a class="headerlink" href="#classylss.binding.Spectra.has_pk_matter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean flag specifying whether matter power spectra have been
+requested as output.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.k_pivot">
+<code class="descname">k_pivot</code><a class="headerlink" href="#classylss.binding.Spectra.k_pivot" title="Permalink to this definition">¶</a></dt>
+<dd><p>The primordial power spectrum pivot scale, where the primordial power
+is equal to <img class="math" src="_images/math/48ac89f08c779c8b4066504a0da1325a7e5d307a.png" alt="A_s"/>. Units of <img class="math" src="_images/math/7bb56e2b99e97228371a2998e38b7a5e1debe7bc.png" alt="h \mathrm{Mpc}^{-1}"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.ln_1e10_A_s">
+<code class="descname">ln_1e10_A_s</code><a class="headerlink" href="#classylss.binding.Spectra.ln_1e10_A_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <img class="math" src="_images/math/bd668395c3f62e3bb066c02267f526ece1ea8d4a.png" alt="\log(10^{10}A_s)"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.n_s">
+<code class="descname">n_s</code><a class="headerlink" href="#classylss.binding.Spectra.n_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>The tilt of the primordial power spectrum.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.nonlinear">
+<code class="descname">nonlinear</code><a class="headerlink" href="#classylss.binding.Spectra.nonlinear" title="Permalink to this definition">¶</a></dt>
+<dd><p>Boolean flag specifying whether the power spectrum is nonlinear.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Spectra.sigma8">
+<code class="descname">sigma8</code><a class="headerlink" href="#classylss.binding.Spectra.sigma8" title="Permalink to this definition">¶</a></dt>
+<dd><p>The amplitude of matter fluctuations at <img class="math" src="_images/math/50909ef26a876e834123e461844d26842f3a2c51.png" alt="z=0"/>.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="classylss.binding.Spectra.sigma8_z">
+<code class="descname">sigma8_z</code><span class="sig-paren">(</span><em>self</em>, <em>z</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Spectra.sigma8_z" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return <img class="math" src="_images/math/e412bb5ba045b0e7a31e096c8e9ad486ee392b31.png" alt="\sigma_8(z)"/>.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="classylss.binding.Thermo">
+<em class="property">class </em><code class="descclassname">classylss.binding.</code><code class="descname">Thermo</code><span class="sig-paren">(</span><em>ClassEngine engine</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.Thermo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<dl class="attribute">
+<dt id="classylss.binding.Thermo.rs_drag">
+<code class="descname">rs_drag</code><a class="headerlink" href="#classylss.binding.Thermo.rs_drag" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comoving sound horizon at baryon drag, in <img class="math" src="_images/math/032db98bdb02ab5766c145bf516b57ace73ef60b.png" alt="\mathrm{Mpc}/h"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Thermo.rs_rec">
+<code class="descname">rs_rec</code><a class="headerlink" href="#classylss.binding.Thermo.rs_rec" title="Permalink to this definition">¶</a></dt>
+<dd><p>The comoving sound horizon at recombination, <img class="math" src="_images/math/892f3dd1990a9eff108fe0a8727f0c1a65e0f574.png" alt="z=z_\mathrm{rec}"/>.
+Units of <img class="math" src="_images/math/032db98bdb02ab5766c145bf516b57ace73ef60b.png" alt="\mathrm{Mpc}/h"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Thermo.tau_reio">
+<code class="descname">tau_reio</code><a class="headerlink" href="#classylss.binding.Thermo.tau_reio" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reionization optical depth.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Thermo.theta_s">
+<code class="descname">theta_s</code><a class="headerlink" href="#classylss.binding.Thermo.theta_s" title="Permalink to this definition">¶</a></dt>
+<dd><p>The sound horizon angle at recombination, equal to
+<img class="math" src="_images/math/4246da7c877ee653e1c19cb12e8512ab4a0082a1.png" alt="r_s(z_\mathrm{rec}) / D_a(z_\mathrm{rec})"/>.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Thermo.z_drag">
+<code class="descname">z_drag</code><a class="headerlink" href="#classylss.binding.Thermo.z_drag" title="Permalink to this definition">¶</a></dt>
+<dd><p>The baryon drag redshift.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Thermo.z_rec">
+<code class="descname">z_rec</code><a class="headerlink" href="#classylss.binding.Thermo.z_rec" title="Permalink to this definition">¶</a></dt>
+<dd><p>The redshift at which the visibility reaches its maximum; equals
+the recombination redshift.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="classylss.binding.Thermo.z_reio">
+<code class="descname">z_reio</code><a class="headerlink" href="#classylss.binding.Thermo.z_reio" title="Permalink to this definition">¶</a></dt>
+<dd><p>The reionization redshift.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="classylss.binding.val2str">
+<code class="descclassname">classylss.binding.</code><code class="descname">val2str</code><span class="sig-paren">(</span><em>val</em><span class="sig-paren">)</span><a class="headerlink" href="#classylss.binding.val2str" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="classylss.astropy_compat.html"
+                        title="previous chapter">classylss.astropy_compat module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="classylss.version.html"
+                        title="next chapter">classylss.version module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/classylss.binding.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="classylss.version.html" title="classylss.version module"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="classylss.astropy_compat.html" title="classylss.astropy_compat module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">classylss 0.2.6.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="modules.html" >API Reference</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="classylss.html" >classylss package</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Nick Hand.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+    </div>
+  </body>
+</html>

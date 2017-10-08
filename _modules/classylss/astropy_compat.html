@@ -1,0 +1,147 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>classylss.astropy_compat &#8212; classylss 0.2.6.dev0 documentation</title>
+    <link rel="stylesheet" href="../../_static/nature.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.2.6.dev0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+  </head>
+  <body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">classylss 0.2.6.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../classylss.html" accesskey="U">classylss</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for classylss.astropy_compat</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">.binding</span> <span class="k">import</span> <span class="n">Background</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<div class="viewcode-block" id="AstropyCompat"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat">[docs]</a><span class="k">class</span> <span class="nc">AstropyCompat</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot; A cosmology delegate object that provides astropy compatibility&quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">engine</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">engine</span> <span class="o">=</span> <span class="n">engine</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">bg</span> <span class="o">=</span> <span class="n">Background</span><span class="p">(</span><span class="n">engine</span><span class="p">)</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Om0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_m</span>
+<div class="viewcode-block" id="AstropyCompat.Om"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Om">[docs]</a>    <span class="k">def</span> <span class="nf">Om</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_m</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Ob0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_b</span>
+<div class="viewcode-block" id="AstropyCompat.Ob"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Ob">[docs]</a>    <span class="k">def</span> <span class="nf">Ob</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_b</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Ogamma0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_g</span>
+<div class="viewcode-block" id="AstropyCompat.Ogamma"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Ogamma">[docs]</a>    <span class="k">def</span> <span class="nf">Ogamma</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_g</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Odm0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_cdm</span>
+<div class="viewcode-block" id="AstropyCompat.Odm"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Odm">[docs]</a>    <span class="k">def</span> <span class="nf">Odm</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_cdm</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Ok0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_k</span>
+<div class="viewcode-block" id="AstropyCompat.Ok"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Ok">[docs]</a>    <span class="k">def</span> <span class="nf">Ok</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_k</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Ode0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_lambda</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_fld</span>
+<div class="viewcode-block" id="AstropyCompat.Ode"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Ode">[docs]</a>    <span class="k">def</span> <span class="nf">Ode</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_lambda</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_fld</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Onu0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_ncdm_tot</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega0_ur</span>
+<div class="viewcode-block" id="AstropyCompat.Onu"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Onu">[docs]</a>    <span class="k">def</span> <span class="nf">Onu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_ncdm</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">Omega_ur</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Tcmb0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">T0_cmb</span>
+<div class="viewcode-block" id="AstropyCompat.Tcmb"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Tcmb">[docs]</a>    <span class="k">def</span> <span class="nf">Tcmb</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">T0_cmb</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Tnu0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">T0_ncdm</span>
+<div class="viewcode-block" id="AstropyCompat.Tnu"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.Tnu">[docs]</a>    <span class="k">def</span> <span class="nf">Tnu</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">T0_ncdm</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">w0</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">w0_fld</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">wa</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span> <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">wa_fld</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">has_massive_nu</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">bg</span><span class="o">.</span><span class="n">N_ncdm</span> <span class="o">&gt;</span> <span class="mi">0</span>
+
+<div class="viewcode-block" id="AstropyCompat.nu_relative_density"><a class="viewcode-back" href="../../classylss.astropy_compat.html#classylss.astropy_compat.AstropyCompat.nu_relative_density">[docs]</a>    <span class="k">def</span> <span class="nf">nu_relative_density</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Onu</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">Ogamma</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">classylss 0.2.6.dev0 documentation</a> &#187;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &#187;</li>
+          <li class="nav-item nav-item-2"><a href="../classylss.html" >classylss</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Nick Hand.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.6.3.
+    </div>
+  </body>
+</html>
